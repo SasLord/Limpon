@@ -76,6 +76,8 @@ h1 {
 .wrap {
     max-width: 1110px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .box-header {
     display: flex;
@@ -178,30 +180,37 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     max-width: 1110px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
-.list-company-item {
+.company-1 { flex-basis: 198px; }
+.company-2 { flex-basis: 200px; }
+.company-3 { flex-basis: 201px; }
+.company-4 { flex-basis: 200px; }
+.list-company-item span {
     display: block;
 }
-.company-1 {
+.company-1 span {
     background-image: url(../img/comp_logo_1.png);
-    flex-basis: 198px;
+    width: 198px;
     height: 58px;
 }
-.company-2 {
+.company-2 span {
     background-image: url(../img/comp_logo_2.png);
-    flex-basis: 200px;
+    width: 200px;
     height: 69px;
 }
-.company-3 {
+.company-3 span {
     background-image: url(../img/comp_logo_3.png);
-    flex-basis: 201px;
+    width: 201px;
     height: 47px;
 }
-.company-4 {
+.company-4 span {
     background-image: url(../img/comp_logo_4.png);
-    flex-basis: 200px;
+    width: 200px;
     height: 69px;
 }
 .grid {
@@ -211,6 +220,8 @@ h1 {
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 1110px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .grid-title {
     grid-area: a;
@@ -355,7 +366,7 @@ h1 {
 }
 .software-img {
     display: block;
-    background-image: url(../img//software-screen.png);
+    background-image: url(../img/software-screen.png);
     background-repeat: no-repeat;
     width: 931px;
     height: 760px;
@@ -451,6 +462,8 @@ h1 {
 .screen {
     margin-top: 37px;
     margin-bottom: -7px;
+    width: 100%;
+    max-width: 1288px;
 }
 .box-price {
     display: flex;
@@ -528,6 +541,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 .box-subscribe-text {
     font-size: 18px;
@@ -717,6 +731,123 @@ h1 {
     text-align: center;
 }
 
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.contact-form input, .contact-form textarea {
+    font-size: 14px;
+    border: 2px solid #dce4ec;
+    padding: 25px 70px 25px 38px;
+    border-radius: 35px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.contact-form textarea {
+    min-height: 160px;
+    resize: none;
+    margin-bottom: 13px;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+}
+.contact-form input::-webkit-input-placeholder, .contact-form textarea::-webkit-input-placeholder {color:#8995b3;}
+.contact-form input::-moz-placeholder, .contact-form textarea::-moz-placeholder {color:#8995b3;}
+.contact-form input:-moz-placeholder, .contact-form textarea:-moz-placeholder {color:#8995b3;}
+.contact-form input:-ms-input-placeholder, .contact-form textarea:-ms-input-placeholder {color:#8995b3;}
+
+.contact-form .btn-primary {
+    position: relative;
+    padding: 23px 30px 23px 53px;
+    letter-spacing: 2px;
+    max-width: 230px;
+}
+.contact-form .btn-primary::before {
+    content: '';
+    display: block;
+    background-image: url(../img/icon-plane.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 14px;
+    height: 13px;
+    top: calc(50% - 6px);
+    left: 52px;
+}
+.contact-form-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+.contact-form-item::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 40px;
+}
+.contact-form-name::after {
+    background-image: url(../img/icon-user.png);
+    width: 13px;
+    height: 15px;
+    top: calc(50% - 7px);
+}
+.contact-form-mail::after {
+    background-image: url(../img/icon-mail.png);
+    width: 14px;
+    height: 11px;
+    top: calc(50% - 5px);
+}
+.contact-form-text::after {
+    background-image: url(../img/icon-text.png);
+    width: 14px;
+    height: 15px;
+    top: 28px;
+}
+.flex-form {
+    display: flex;
+    justify-content: space-start;
+    align-items: center;
+    max-width: 1090px;
+    margin: 0 auto;
+}
+.flex-form>img {
+    margin-right: 60px;
+}
+.flex-form>div {
+    flex-basis: 47%;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+.social>li {
+    margin-left: 23px;
+}
+.social-fb svg { width: 16px; }
+.social-tw svg { width: 16px; }
+.social-be svg { width: 17px; }
+.social-pt svg { width: 17px; }
+.social-fs svg { width: 17px; }
+.social-link svg, .social-link svg path, .social-link svg g {
+    transition: .3s;
+    fill: #fff;
+}
+.social-link svg:hover, .social-link svg path:hover, .social-link svg g:hover {
+    transition: .3s;
+    fill: #1085e4;
+}
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-flex>p>a {
+    color: #1085e4;
+    text-transform: uppercase;
+}
+
 /* PAGES */
 
 .page-header {
@@ -809,6 +940,62 @@ h1 {
 .page-team {
     background-image: url(../img/bg-team.png);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     text-align: center;
-    padding: 82px 0 10px 0;
+    padding: 82px 0 120px 0;
+}
+.page-form {
+    background-image: url(../img/bg-form.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 70px 0 118px 0;
+}
+.footer {
+    background-color: #192b59;
+    padding: 5px 0px 4px 0px;
+}
+
+/* MEDIA */
+
+@media (max-width: 1050px) {
+    .list-company-item {
+        flex-basis: 50%;
+        margin-bottom: 50px;
+    }
+    .list-company-item span {
+        margin: 0 auto;
+    }
+    .page-company {
+        padding: 60px 0 5px;
+    }
+    .grid {
+        grid-template-areas: 
+        "a a" "b c" "d e" "f g" "h h";
+        grid-template-columns: 1fr 1fr;
+    }
+    .grid h2 {
+        text-align: center;
+    }
+    .grid span {
+        margin-bottom: 10px;
+    }
+    .box-subscribe {
+        flex-direction: column-reverse;
+    }
+    .box-subscribe-child {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .box-subscribe-text {
+        margin: 0 auto 30px;
+    }
+    .box-subscribe img {
+        margin: 0 auto 49px;
+        max-width: 170px;
+    }
+    .page-subscribe {
+        padding: 50px 0 65px 0;
+    }
+}
